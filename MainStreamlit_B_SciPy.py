@@ -3,18 +3,14 @@ import pickle
 import os
 import numpy as np
 
-model_directory - r'Dataset UTS_Gasal 2425.csv'
+model_directory = r'Dataset UTS_Gasal 2425.csv'  # Corrected assignment
 
-model_path = os.path.join(model_directory, 'BestModel_CLF_RandomForest.pkl', 'BestModel_REG_Ridge.pkl')
-
-
-# Load the models
+# Load the models 
 with open('/mnt/data/BestModel_CLF_RandomForest.pkl', 'rb') as f:
     clf_model = pickle.load(f)
 
 with open('/mnt/data/BestModel_REG_Ridge.pkl', 'rb') as f:
     reg_model = pickle.load(f)
-
 # Title for the app
 st.title("Prediction App Using RandomForest Classifier and Ridge Regressor")
 
